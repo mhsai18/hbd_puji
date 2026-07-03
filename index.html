@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="ie lt-ie9"> <![endif]-->
+<!--[if gt IE 8]> <html> <![endif]-->
+<!--[if !IE]><!--><html lang="en"><!-- <![endif]-->
+<head>
+	<title>Happy Birthday</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Happy Birthday Anggie">
+	<meta name="robots" content="index, follow" />
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+	<link rel="author" href="alex" /> 
+    <meta name="keywords" content="Birthday, Happy">
+
+    <!-- Strat of Facebook Meta -->
+    <meta property="og:type" content="E-Greeting" />
+    <meta property="og:image" content="favicon.ico" />
+    <meta property="og:description" content="Wish you a very Happy Birthday">
+    <!-- End of Facebook Meta Tags -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="css/loading.css">
+	<link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'> -->
+	<link rel="stylesheet/less" href="cake.less"> 
+	<style type="text/css" id="less:birthday-cake">
+    
+    /* ============================================== POSITION
+*/
+.cake {
+  position: absolute;
+  display: none;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  height: 300px;
+}
+/* ============================================== BASE
+*/
+.cake:after {
+  background: #ffffff;
+  border-radius: 300px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 6px;
+}
+/* ============================================== Candle
+*/
+.velas {
+  background: #ffffff;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -7.5px;
+  margin-top: -25px;
+  width: 15px;
+  height: 50px;
+}
+.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6.66666667px;
+}
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+/* ============================================== Fire
+*/
+.fuego {
+  display: none;
+  border-radius: 100%;
+  box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 37.5px;
+}
+.fuego:nth-child(1) {
+  -webkit-animation: fuego 2s infinite;
+  -moz-animation: fuego 2s infinite;
+  -o-animation: fuego 2s infinite;
+  -ms-animation: fuego 2s infinite;
+  animation: fuego 2s infinite;
+}
+.fuego:nth-child(2) {
+  -webkit-animation: fuego 1.5s infinite;
+  -moz-animation: fuego 1.5s infinite;
+  -o-animation: fuego 1.5s infinite;
+  -ms-animation: fuego 1.5s infinite;
+  animation: fuego 1.5s infinite;
+}
+.fuego:nth-child(3) {
+  -webkit-animation: fuego 1s infinite;
+  -moz-animation: fuego 1s infinite;
+  -o-animation: fuego 1s infinite;
+  -ms-animation: fuego 1s infinite;
+  animation: fuego 1s infinite;
+}
+.fuego:nth-child(4) {
+  -webkit-animation: fuego 0.5s infinite;
+  -moz-animation: fuego 0.5s infinite;
+  -o-animation: fuego 0.5s infinite;
+  -ms-animation: fuego 0.5s infinite;
+  animation: fuego 0.5s infinite;
+}
+.fuego:nth-child(5) {
+  -webkit-animation: fuego 0.2s infinite;
+  -moz-animation: fuego 0.2s infinite;
+  -o-animation: fuego 0.2s infinite;
+  -ms-animation: fuego 0.2s infinite;
+  animation: fuego 0.2s infinite;
+}
+/* ============================================== Animation Fire
+*/
+@-webkit-keyframes fuego {
+  0% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    -webkit-transform: translateY(-60px) scale(0);
+  }
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-transform: translateY(0) scale(1);
+  }
+}
+@-moz-keyframes fuego {
+  0% {
+    background: rgba(254, 248, 97, 0.5);
+    -moz-transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    -moz-transform: translateY(-60px) scale(0);
+  }
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    -moz-transform: translateY(0) scale(1);
+  }
+}
+@-o-keyframes fuego {
+  0% {
+    background: rgba(254, 248, 97, 0.5);
+    -o-transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    -o-transform: translateY(-60px) scale(0);
+  }
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    -o-transform: translateY(0) scale(1);
+  }
+}
+@-ms-keyframes fuego {
+  0% {
+    background: rgba(254, 248, 97, 0.5);
+    -ms-transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    -ms-transform: translateY(-60px) scale(0);
+  }
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    -ms-transform: translateY(0) scale(1);
+  }
+}
+@keyframes fuego {
+  0% {
+    background: rgba(254, 248, 97, 0.5);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    transform: translateY(-60px) scale(0);
+  }
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    transform: translateY(0) scale(1);
+  }
+}
+/* ============================================== Frosting
+*/
+.cobertura {
+  background: #ece7e3;
+  border-radius: 150px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-left: -83.33333333px;
+  margin-top: -15px;
+  width: 166.66666667px;
+  height: 37.5px;
+  z-index: 10;
+}
+.cobertura:after,
+.cobertura:before {
+  background: #ece7e3;
+  border-radius: 300px;
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 30px;
+}
+.cobertura:after {
+  top: 20px;
+  right: 42.85714286px;
+}
+.cobertura:before {
+  top: 30px;
+  right: 27.27272727px;
+}
+/* ============================================== BIZCOCHO
+*/
+.bizcocho {
+  background: #6d3826;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -75px;
+  width: 150px;
+  height: 100px;
+}
+.bizcocho:after,
+.bizcocho:before {
+  background: rgba(236, 231, 227, 0.6);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15px;
+}
+.bizcocho:after {
+  top: 30%;
+  left: 0;
+}
+.bizcocho:before {
+  top: 60%;
+  left: 0;
+}
+
+/* ============================================== Album
+*/
+.album-photo {
+  display: none;
+  position: absolute;
+  width: 300px; /* looks like landscape photo */
+  height: auto;
+  border: 5px solid white;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.album-photo:hover {
+  transform: scale(1.05) rotate(0deg);
+  z-index: 10;
+}
+
+/* Left side */
+.album-left-1 { top: 30px; left: 50px; transform: rotate(-5deg); }
+.album-left-2 { top: 380px; left: 70px; transform: rotate(4deg); }
+
+/* Right side */
+.album-right-1 { top: 30px; right: 50px; transform: rotate(5deg); }
+.album-right-2 { top: 205px; right: 70px; transform: rotate(-4deg); }
+.album-right-3 { top: 380px; right: 50px; transform: rotate(5deg); }
+
+
+/* ============================================== TEXT
+*/
+h1,
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.profile-img {
+  position: absolute; /* relative to .cake */
+  bottom: 30px;  /* 10px below cake */
+  right: -170px;  /* 70px to the right of cake */
+  width: 150px;
+  height: 150px;
+  border: 5px solid white;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+</style>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+</head>
+
+<body>
+  
+
+<!-- Instruction Page -->
+<div id="instruction-page">
+
+    <div class="instruction-card">
+
+        <div class="icon">💻</div>
+
+        <h1>Before You Begin</h1>
+
+        <p>
+            This experience is best viewed on a Desktop or Laptop in full screen mode.<br><br>
+
+            🎵 Turn your volume ON<br>
+            🖥️ This is made by spending lot of time so pls open in laptop in full screen mode<br>
+            ❤️ Click the buttons which apper on screen. Enjoy the journey.<br>
+                  Made by M.HEMANTH SAI
+        </p>
+
+        <button id="startJourney">
+            Begin Journey →
+        </button>
+
+    </div>
+
+</div>
+
+  <div id="countdown-overlay">
+    <h1>🎉 A Small Surprise Is Waiting...</h1>
+
+    <div class="countdown">
+        <div><span id="days">00</span><small>Days</small></div>
+        <div><span id="hours">00</span><small>Hours</small></div>
+        <div><span id="minutes">00</span><small>Minutes</small></div>
+        <div><span id="seconds">00</span><small>Seconds</small></div>
+    </div>
+</div>
+	<div class="loading"></div>
+  <img src="assets/images/puji6.jpeg" class="album-photo album-left-1">
+  <img src="assets/images/puji4.jpeg" class="album-photo album-left-2">
+  <img src="assets/images/puji3_1_409x435.jpeg" class="album-photo album-right-1">
+  <img src="assets/images/puji2.jpeg" class="album-photo album-right-2">
+  <!-- Hint image -->
+  <img src="assets/images/can-zoom.png" class="can-zoom">
+
+	<audio class="song" controls loop>
+        <source src="assets/audio/hbd.mp3"></source>
+	   Your browser isn't invited for super fun audio time.
+    </audio>
+    <div class="balloons text-center" id="b1">
+    	<h2 style="color:#F2B300;">P</h2>
+    </div>
+    <div class="balloons text-center" id="b2">
+    	<h2 style="color:#0719D4;">U</h2>
+    </div>
+	<div class="balloons text-center" id="b3">
+    	<h2 style="color:#D14D39;">J</h2>
+    </div>
+	<div class="balloons text-center" id="b4">
+    	<h2 style="color:#8FAD00;">I</h2>
+    </div>
+	<div class="balloons text-center" id="b5">
+    	<h2 style="color:#8377E4;">T</h2>
+    </div>
+    <div class="balloons text-center" id="b6">
+    	<h2 style="color:#99C96A;">H</h2>
+    </div>
+    <div class="balloons text-center" id="b7">
+    	<h2 style="color:#20CFB4;">A</h2>
+    </div>
+
+    <img src="assets/images/Balloon-Border.png" width="100%" class="balloon-border">
+ 
+
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-md-2 col-xs-2 bulb-holder">
+				<div class="bulb" id="bulb_yellow"></div>
+			</div>
+			<div class="col-md-2 col-xs-2 bulb-holder">
+				<div class="bulb" id="bulb_red"></div>
+			</div>
+			<div class="col-md-2 col-xs-2 bulb-holder">
+				<div class="bulb" id="bulb_blue"></div>
+			</div>
+			<div class="col-md-2 col-xs-2 bulb-holder">
+				<div class="bulb" id="bulb_green"></div>
+			</div>
+			<div class="col-md-2 col-xs-2 bulb-holder">
+				<div class="bulb" id="bulb_pink"></div>
+			</div>
+			<div class="col-md-2 col-xs-2 bulb-holder">
+				<div class="bulb" id="bulb_orange"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<img src="assets/images/banner.png" class="bannar">
+			</div>
+		</div>
+		<!-- <div class="row message">
+			<div class="col-md-12"><p>Khushbu</p></div>
+		</div> -->
+		<div class="row cake-cover">
+			<div class="col-md-12 texr-center">
+				<div class="cake">
+				  <div class="velas">
+				    <div class="fuego"></div>
+				    <div class="fuego"></div>
+				    <div class="fuego"></div>
+				    <div class="fuego"></div>
+				    <div class="fuego"></div>
+				  </div>
+				  <div class="cobertura"></div>
+          <img src="assets/images/fox.webp" class="profile-img">
+				  <div class="bizcocho"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row message">
+			<div class="col-md-12">
+				<p>If you've reached this point,</p>
+				<p>thank you for staying till the very end.</p>
+				<p>Every click, every animation,</p>
+				<p>every line, and every little detail</p>
+				<p>you saw was created with one hope</p>
+				<p>—to make you smile,</p>
+				<p>even if it was just for a moment.......</p>
+				<p>Life moves incredibly fast.</p>
+				<p>Birthdays come and go, years change,</p>
+				<p>and people take different paths.</p>
+				<p>But some moments become memories</p>
+				<p>that quietly stay with us forever.</p>
+				<p>I hope this becomes</p>
+				<p>one of those moments for you........</p>
+				<p>You deserve</p>
+				<p>happiness that doesn't fade with time,</p>
+				<p>dreams that never stop growing,</p>
+				<p>remember how strong, kind,</p>
+				<p>and capable you truly are.</p>
+				<p>Never let a</p>
+				<p>bad day convince you that</p>
+				<p>you deserve anything </p>
+				<p>less than a beautiful life.......</p>
+				<p>Thank you</p>
+				<p>for being a part of my journey,</p>
+				<p>even if it was just as a 4 month</p>
+				<p>friendship....</p>
+				<p>Knowing you has been one of</p>
+				<p>the beautiful chapters of my year,</p>
+				<p>and I'm genuinely grateful for</p>
+				<p>every conversation we had</p>
+				<p>I don't know what the future holds,</p>
+				<p>but I sincerely hope</p>
+				<p>it gives you everything you've</p>
+				<p>ever wished for.</p>
+				<p>May every birthday remind you</p>
+				<p>not of the years you've lost,</p>
+				<p>but of the countless beautiful memories</p>
+				<p>still waiting to be created.</p>
+				<p>Keep smiling.</p>
+				<p>Keep believing in yourself.</p>
+				<p>Keep shining, because</p>
+				<p>the world becomes a</p>
+				<p>little brighter when you do.</p>
+				<p>Once again...</p>
+				<p>Happy Birthday, Pujitha. 🎂❤️ .....wait</p>
+			</div>
+		</div>
+		<div class="navbar navbar-fixed-bottom">
+			<div class="row">
+				<div class="col-md-6 text-center col-md-offset-3">
+					<button class="btn btn-primary" id="turn_on">Turn On Lights</button>
+					<button class="btn btn-primary" id="play">Play the Music</button>
+					<button class="btn btn-primary" id="bannar_coming">Let's Decorate</button>
+					<button class="btn btn-primary" id="balloons_flying">Calm, i got you some baloons</button>
+					<button class="btn btn-primary" id="cake_fadein">Cake? of course!</button>
+					<button class="btn btn-primary" id="light_candle">Don't forget to Light the Candle</button>
+					<button class="btn btn-primary" id="wish_message">Happy Birthday</button>
+					<button class="btn btn-primary" id="story">A mesage for you</button>
+					<!-- <button class="btn btn-primary" id="cake_cut">Lrt's Cut the Cake</button> -->
+				</div>
+			</div>
+			<!-- <div class="col-md-2">
+			</div>
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-2">
+			</div> -->
+		</div>
+
+
+	</div>
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="zoomed photo">
+  </div>
+    <div id="directorsCut">
+
+    <div class="terminal-box">
+
+        <div class="terminal-header">
+
+            <span class="red"></span>
+            <span class="yellow"></span>
+            <span class="green"></span>
+
+            <p>Behind The Scences</p>
+
+        </div>
+
+        <div id="terminal"></div>
+
+    </div>
+    </div>
+<div id="postCredit">
+
+    <div class="post-box">
+
+        <h1>AT LAST..</h1>
+
+        <p id="postText">
+            If you're still here...
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+<script>
+function enterWebsite(){
+
+    document.getElementById("caution-screen").style.display="none";
+
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="js/effect.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8SQ2H9J48M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8SQ2H9J48M');
+</script>
+</html>
